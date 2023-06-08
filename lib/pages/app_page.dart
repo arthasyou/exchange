@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:exchange/widgets/language_widget.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -10,6 +11,9 @@ class AppPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Exchange'),
+        actions: const [
+          LanguagePicerWidget(),
+        ],
       ),
       body: Column(children: [
         ElevatedButton(

@@ -4,6 +4,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:exchange/routes/router.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/language_widget.dart';
+
 @RoutePage()
 class RootPage extends StatelessWidget {
   const RootPage({super.key});
@@ -23,6 +25,14 @@ class RootPage extends StatelessWidget {
       builder: (context, child) {
         final tabsRouter = AutoTabsRouter.of(context);
         return Scaffold(
+          appBar: AppBar(
+            title: const Text('Exchange'),
+            centerTitle: true,
+            actions: const [
+              LanguagePicerWidget(),
+              SizedBox(width: 12),
+            ],
+          ),
           body: child,
           bottomNavigationBar: NavigationBar(
             destinations: const [
